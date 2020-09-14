@@ -1,0 +1,61 @@
+<div class="nav">
+  <div [class]="{ active: tab === 1 }" (click)="tab = 1">Exercice 1</div>
+  <div [class]="{ active: tab === 2 }" (click)="tab = 2">Exercice 2</div>
+  <div [class]="{ active: tab === 3 }" (click)="tab = 3">Exercice 3</div>
+  <div [class]="{ active: tab === 4 }" (click)="tab = 4">Exercice 4</div>
+</div>
+
+<div class="response">
+  <div class="wrapper" *ngIf="tab === 1">
+    <div class="bandeau">Flex bandeau</div>
+    <div class="content">
+      <div class="info">
+        <h3>info 1</h3>
+        <p>Ceci est une information importante</p>
+      </div>
+      <div class="info inf">info 2</div>
+      <div class="info inf">info 3</div>
+      <h3>Flex contenu</h3>
+    </div>
+  </div>
+
+  <div class="flex-wrapper" *ngIf="tab === 2">
+    <div class="left">1</div>
+    <div class="right">
+      <div class="right-content">
+        <div class="header">1</div>
+        <div class="footer">3A</div>
+        <div class="footer">3B</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="exo3" *ngIf="tab === 3">
+    <div class="bandeau-h">Entete</div>
+    <div class="milieu">
+      <div class="bandeau-v">Nav</div>
+      <div class="article">
+        <div>
+          <h3>Article</h3>
+          <p>Ceci est un article.</p>
+        </div>
+      </div>
+      <div class="bandeau-v">Divers</div>
+    </div>
+    <div class="bandeau-h">Pieds</div>
+  </div>
+
+  <div class="exo4" *ngIf="tab === 4">
+    <div class="entete box">Entete</div>
+    <div class="exo4-wrapper">
+      <div class="exo4-nav box">Nav</div>
+      <div class="exo4-content">
+        <div class="article-divers">
+          <div class="exo4-article box">article</div>
+          <div class="divers box">Divers</div>
+        </div>
+        <div class="exo4-footer box">Pieds</div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,69 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="login()">
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input
+        formControlName="email"
+        type="email"
+        class="form-control"
+        id="email"
+        required
+      />
+      <div *ngIf="invalidField('email')">
+        <app-error-message
+          *ngIf="email().errors.required"
+          errorMessage="Email is required."
+        ></app-error-message>
+        <app-error-message
+          *ngIf="email().errors.email"
+          errorMessage="Invalid email."
+        ></app-error-message>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        formControlName="password"
+        type="password"
+        class="form-control"
+        id="password"
+      />
+      <div *ngIf="invalidField('password')">
+        <app-error-message
+          *ngIf="password.errors.required"
+          errorMessage="Password is required."
+        ></app-error-message>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="confirmpassword">Confirm password</label>
+      <input
+        formControlName="confirmPassword"
+        type="password"
+        class="form-control"
+        id="confirmpassword"
+      />
+      <div *ngIf="invalidField('confirmPassword') && password.value">
+        <app-error-message
+          *ngIf="confirmPassword.errors.required"
+          errorMessage="Please confirm the password."
+        ></app-error-message>
+      </div>
+    </div>
+
+    <div class="form-group form-check">
+      <div *ngIf="form.invalid && form.errors">
+        <app-error-message
+          *ngIf="form.errors.notMatch"
+          errorMessage="Password and confirmation does not match."
+        ></app-error-message>
+      </div>
+    </div>
+
+    <button [disabled]="form.invalid" type="submit" class="btn btn-primary">
+      Submit
+    </button>
+  </form>
+</div>

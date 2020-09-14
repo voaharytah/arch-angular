@@ -1,0 +1,51 @@
+<div>
+  <button class="btn prev" (click)="goToDevis()">Back</button>
+  <div class="navigation">
+    <button
+      [disabled]="currentIndex === 0"
+      (click)="previous()"
+      class="btn prev"
+    >
+      <<
+    </button>
+    <button
+      [disabled]="currentIndex === stat_ids.length - 1"
+      (click)="next()"
+      class="btn next"
+    >
+      >>
+    </button>
+  </div>
+
+  <div *ngIf="!(loading$ | async)">
+    <div *ngFor="let item of devisDetail; let i = index" class="devis-detail">
+      <div class="img-wrapper">
+        <img
+          (click)="imgPreview(i)"
+          class="image img-fluid"
+          [src]="imgSrc(item.image)"
+        />
+      </div>
+      <div class="description">
+        <div>{{ item.wp_repere }}</div>
+        <div>{{ item.wp_article }}</div>
+        <div>{{ item.name }}</div>
+        <div>Hauteur : {{ item.hauteur }}</div>
+        <div>Largeur : {{ item.largeur }}</div>
+        <div>PU. HT : {{ item.puht_r }}</div>
+        <div>PT. HT : {{ item.ptht_r }}</div>
+        <div>Quantité : {{ item.qte }}</div>
+        <div>{{ item.art_desc_l1 }}</div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="loading$ | async">Loading...</div>
+
+  <app-img-preview
+    (hidePreview)="src = null"
+    [src]="src"
+    [index]="indexImg"
+    [hide]="!src"
+  ></app-img-preview>
+</div>

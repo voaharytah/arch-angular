@@ -1,0 +1,10 @@
+<div>
+  <div>
+    {{ count$ | async | json }}
+  </div>
+  <div>
+    <button (click)="incrementHomeScore()">incrementHomeScore</button>
+    <button (click)="incrementAwayScore()">incrementAwayScore</button>
+    <button (click)="setScore()">resetScore</button>
+  </div>
+</div>

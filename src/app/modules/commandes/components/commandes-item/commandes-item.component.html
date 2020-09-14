@@ -1,0 +1,30 @@
+<div *ngIf="commandes" class="commandes-item">
+  <div class="left">
+    <div class="column-1">
+      <app-item label="Date vente" [value]="commandes.date_vente"></app-item>
+      <app-item label="Commande N°" [value]="commandes.dossier_no"></app-item>
+      <app-item label="Ref. Client" [value]="commandes.ref_client"></app-item>
+    </div>
+
+    <div class="column-2">
+      <app-item
+        label="Semaine livraison"
+        [value]="commandes.etat_livraison"
+      ></app-item>
+      <app-item label="Montant HT" [value]="commandes.montant_ht"></app-item>
+      <app-item label="Type" [value]="commandes.type_commande"></app-item>
+    </div>
+  </div>
+
+  <div class="right">
+    <div>{{ commandes.montant_ttc }}</div>
+    <div *ngIf="commandes.doc_pdf">
+      <button (click)="pdf.emit(commandes.doc_pdf)" class="btn">Pdf</button>
+    </div>
+    <div>
+      <button (click)="commandesDetail(commandes.stat_id)" class="btn">
+        Détail
+      </button>
+    </div>
+  </div>
+</div>

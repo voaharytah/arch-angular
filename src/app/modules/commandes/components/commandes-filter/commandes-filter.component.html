@@ -1,0 +1,78 @@
+<div class="filter">
+  <form (ngSubmit)="filter()" [formGroup]="form">
+    <div>
+      <h5>Filtrer par date</h5>
+      <div class="date-filter">
+        <div>
+          <div class="form-group">
+            <label for="filter">Filtrer</label>
+            <select formControlName="filter" id="filter" class="custom-select">
+              <option
+                *ngFor="let filter of commandesFilter"
+                [ngValue]="filter.value"
+              >
+                {{ filter.label }}
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <div class="form-group">
+            <label for="month">Mois</label>
+            <select formControlName="month" id="month" class="custom-select">
+              <option *ngFor="let month of months" [ngValue]="month.value">
+                {{ month.label }}
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <div class="form-group">
+            <label for="year">Année</label>
+            <select formControlName="year" id="year" class="custom-select">
+              <option *ngFor="let year of years" [ngValue]="year.value">
+                {{ year.label }}
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="date-filter">
+        <div>
+          <div class="form-group">
+            <label for="sem_liv">Semaine de livraison</label>
+            <select
+              formControlName="sem_liv"
+              id="sem_liv"
+              class="custom-select"
+            >
+              <option
+                *ngFor="let filter of weekInYear"
+                [ngValue]="filter.value"
+              >
+                {{ filter.label }}
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <!-- <div>
+          <div class="form-group">
+            <label for="sortBy">Trier par</label>
+            <select formControlName="sortBy" id="sortBy" class="custom-select">
+              <option *ngFor="let month of months" [ngValue]="month.value">
+                {{ month.label }}
+              </option>
+            </select>
+          </div>
+        </div> -->
+
+        <div></div>
+      </div>
+    </div>
+
+    <input class="btn" type="submit" value="Rechercher" />
+  </form>
+</div>

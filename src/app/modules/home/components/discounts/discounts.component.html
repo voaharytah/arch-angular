@@ -1,0 +1,20 @@
+<div class="menu">
+  <ul class="menu-wrapper">
+    <li><a>Menu 1</a></li>
+    <li><a>Menu 2</a></li>
+    <li><a>Menu 3</a></li>
+    <li><a>Menu 4</a></li>
+  </ul>
+</div>
+
+<div class="search">
+  <span>Rechercher</span>
+  <input type="text" class="form-control" />
+  <button class="btn btn-primary">Search</button>
+</div>
+
+<div class="items">
+  <div *ngFor="let item of items" class="item">
+    {{ item }}
+  </div>
+</div>

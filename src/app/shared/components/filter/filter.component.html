@@ -1,0 +1,9 @@
+<div class="filter">
+  <app-filter-list
+    (filterData)="handleFilterData()"
+    [filters]="filterString"
+  ></app-filter-list>
+  <app-filter-input-wrapper *ngIf="showFilterInput">
+    <ng-content></ng-content>
+  </app-filter-input-wrapper>
+</div>

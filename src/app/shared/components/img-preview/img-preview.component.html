@@ -1,0 +1,11 @@
+<div *ngIf="!hide && src" id="myModal" class="modaly">
+  <span (click)="hidePreview.emit()" class="close">&times;</span>
+  <span (click)="previous()" class="close prev"><</span>
+
+  <div class="modaly-content">
+    <img class="img-fluid" id="img01" [src]="src[index]" />
+  </div>
+  <span (click)="next()" class="close next">></span>
+
+  <div id="caption"></div>
+</div>

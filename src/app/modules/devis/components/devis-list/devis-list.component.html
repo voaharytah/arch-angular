@@ -1,0 +1,21 @@
+<div class="devis-list">
+  <app-filter
+    (filterData)="showFilterForm = !showFilterForm"
+    [showFilterInput]="showFilterForm"
+    [filterString]="filterString"
+  >
+    <app-devis-filter
+      [defaultFilter]="defaultCriteria"
+      (filterDevis)="handleDevisFilter($event)"
+    ></app-devis-filter>
+  </app-filter>
+  <div *ngIf="!(loading$ | async)">
+    <app-devis-item
+      *ngFor="let devis of devis$ | async"
+      (pdf)="getPdf($event)"
+      [devis]="devis"
+      [currentId]="currentId"
+    ></app-devis-item>
+  </div>
+  <div *ngIf="loading$ | async">Loading...</div>
+</div>

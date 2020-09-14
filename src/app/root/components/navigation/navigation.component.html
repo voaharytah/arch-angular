@@ -1,0 +1,11 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <app-drop-down-nav
+        *ngFor="let menu of menus"
+        [menu]="nav[menu]"
+        [key]="menu"
+      ></app-drop-down-nav>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,16 @@
+label {
+  color: grey;
+}
+
+.value {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.item {
+  margin-top: 0px;
+}
+
+div {
+  word-break: break-all;
+}

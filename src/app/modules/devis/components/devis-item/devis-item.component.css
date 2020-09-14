@@ -1,0 +1,39 @@
+.devis-item {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  border: 1px solid;
+  padding: 5px;
+  margin-top: 15px;
+  border: 1px solid white;
+  background-color: white;
+  box-shadow: 3px 3px 10px rgb(223, 203, 203);
+}
+
+.left,
+.right {
+  padding: 5px;
+  flex: 1;
+}
+
+.right > div {
+  text-align: right;
+}
+
+.left > div {
+  text-align: left;
+}
+
+.btn {
+  border: 1px solid #ced4da;
+  width: 56px;
+  margin: 2px;
+  height: 23px;
+  font-size: 13px;
+  line-height: 4px;
+}
+
+.selected {
+  border: 5px solid silver;
+}

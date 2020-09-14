@@ -1,0 +1,7 @@
+<app-title [title]="title">
+  <div *ngIf="contact" class="contact">
+    <h5>{{ contact.name }}</h5>
+    <div>{{ contact.email }}</div>
+    <div>{{ contact.phone }}</div>
+  </div>
+</app-title>

@@ -1,0 +1,14 @@
+.container {
+  width: 61%;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+.contact {
+  margin-top: 15px;
+}
+
+.item-flex {
+  display: flex;
+  flex-flow: row wrap;
+}

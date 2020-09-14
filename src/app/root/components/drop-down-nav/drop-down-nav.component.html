@@ -1,0 +1,29 @@
+<li [class]="{ show: toggle }" class="nav-item dropdown">
+  <span class="nav-link">
+    <span (click)="toggle = false" class="label" routerLink="{{ menu.path }}">
+      {{ menu.label }}
+    </span>
+    <span
+      class="dropdown-toggle"
+      role="button"
+      (click)="toggle = !toggle"
+      *ngIf="menu.subMenus"
+    ></span>
+  </span>
+  <div
+    id="items"
+    *ngIf="menu.subMenus"
+    [class]="{ show: toggle }"
+    class="dropdown-menu"
+  >
+    <a
+      class="dropdown-item"
+      *ngFor="let item of menu.subMenus"
+      routerLink="{{ item.path }}"
+      routerLinkActive="active"
+      (click)="toggle = !toggle"
+    >
+      {{ item.label }}
+    </a>
+  </div>
+</li>

@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "baseUrl": "./src",
+    "types": [],
+    "paths": {
+      "@env": ["environments/environment"],
+      "@app/*": ["app/*"],
+      "@modules/*": ["app/modules/*"],
+      "@root/*": ["app/root/*"],
+      "@data/*": ["app/data/*"],
+      "@services/*": ["app/services/*"],
+      "@shared/*": ["app/shared/*"],
+      "@bdl/*": ["app/services/bdl-service/*"]
+    }
+  },
+  "files": ["src/main.ts", "src/polyfills.ts"],
+  "include": ["src/**/*.d.ts"]
+}

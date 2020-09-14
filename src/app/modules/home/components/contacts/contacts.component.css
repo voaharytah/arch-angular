@@ -1,0 +1,247 @@
+/* Navigations */
+.nav {
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.nav > div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.active {
+  border: 1px solid;
+}
+
+/* Exo 1 */
+.wrapper {
+  background: red;
+  display: flex;
+  justify-content: center;
+}
+
+.bandeau {
+  width: 120px;
+  background: yellow;
+}
+
+.content {
+  background: blue;
+  display: flex;
+  flex-flow: column wrap;
+  width: 80%;
+  align-items: center;
+}
+
+.info {
+  background: #eee;
+  width: 80%;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+}
+
+.inf {
+  align-items: flex-start;
+}
+
+.inf + h3 {
+  color: white;
+}
+
+/* Exo 2 */
+.flex-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 15px;
+  border: 1px solid;
+  padding: 15px;
+}
+
+.left {
+  width: 50%;
+  border: 1px solid;
+  margin-right: 10px;
+}
+
+.right {
+  flex: 1;
+}
+
+.right-content {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.right-content > div {
+  border: 1px solid;
+  width: 100%;
+}
+
+.header {
+  margin-bottom: 10px;
+}
+
+.header + div {
+  margin-right: 10px;
+}
+
+.left,
+.header,
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 450px) {
+  .footer {
+    flex: 1;
+    height: 150px;
+  }
+  .header {
+    height: 100px;
+  }
+}
+
+@media (max-width: 450px) {
+  .flex-wrapper {
+    flex-flow: column wrap;
+  }
+  .left {
+    margin-right: 0px;
+    margin-bottom: 10px;
+    height: 100px;
+    width: 100%;
+  }
+  .header {
+    height: 50px;
+  }
+  .footer {
+    width: 100%;
+    height: 50px;
+  }
+  .header + div {
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Exo 3 */
+.exo3 {
+  padding: 15px;
+  background: silver;
+}
+.bandeau-h {
+  width: 100%;
+  border: 1px solid;
+  text-align: center;
+  height: 64px;
+  line-height: 64px;
+  background: #eee;
+}
+
+.milieu {
+  display: flex;
+  margin: 10px 0px 10px 0px;
+  height: 300px;
+}
+
+.bandeau-v {
+  width: 128px;
+  border: 1px solid;
+  background: #eee;
+  text-align: center;
+  line-height: 300px;
+}
+
+.article {
+  flex: 1;
+  background: #eee;
+  margin: 0px 10px 0px 10px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+}
+
+.article > div {
+  margin-left: 15px;
+}
+
+/* Exo 4 */
+.exo4 {
+  padding: 15px;
+  background: silver;
+}
+
+.box {
+  background: #eee;
+  border: 1px solid;
+}
+
+.entete {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.exo4-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  /* height: 350px; */
+}
+
+.exo4-nav {
+  width: 128px;
+}
+
+.exo4-content {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1;
+}
+
+.article-divers {
+  display: flex;
+  flex-flow: row wrap;
+  height: 315px;
+  margin: 0px 0px 10px 10px;
+}
+
+.exo4-article {
+  width: 80%;
+}
+
+.divers {
+  flex: 1;
+  margin: 0px 0px 0px 10px;
+}
+
+.exo4-footer {
+  margin: 0px 0px 0px 10px;
+}
+
+@media (max-width: 450px) {
+  .exo4-wrapper {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .exo4-nav {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .article-divers {
+    margin: 0px 0px 10px 0px;
+  }
+  .exo4-article {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .divers,
+  .exo4-footer {
+    margin: 0px;
+  }
+}

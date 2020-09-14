@@ -1,0 +1,20 @@
+<div class="commandes-list">
+  <app-filter
+    (filterData)="showFilterForm = !showFilterForm"
+    [showFilterInput]="showFilterForm"
+    [filterString]="filterString"
+  >
+    <app-commandes-filter
+      [defaultFilter]="defaultCriteria"
+      (filterCommandes)="handleCommandesFilter($event)"
+    ></app-commandes-filter>
+  </app-filter>
+  <div *ngIf="!loading">
+    <app-commandes-item
+      *ngFor="let commande of commandes"
+      (pdf)="getPdf($event)"
+      [commandes]="commande"
+    ></app-commandes-item>
+  </div>
+  <div *ngIf="loading">Loading...</div>
+</div>

@@ -1,0 +1,42 @@
+.devis-detail {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 15px 100px 15px 100px;
+  box-shadow: 3px 3px 10px rgb(223, 203, 203);
+  padding: 15px;
+}
+
+.description {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 20px;
+  flex: 1;
+  margin-left: 30px;
+}
+
+.image {
+  width: 350px;
+  height: 350px;
+  border: 1.5px solid silver;
+  padding: 20px;
+  object-fit: contain;
+}
+
+.mg-wrapper {
+  width: 350px;
+  height: 350px;
+  text-align: center;
+}
+
+.btn {
+  border: 1px solid #ced4da;
+  margin-top: 15px;
+}
+
+.navigation {
+  width: 100%;
+}
+
+.next {
+  float: right;
+}

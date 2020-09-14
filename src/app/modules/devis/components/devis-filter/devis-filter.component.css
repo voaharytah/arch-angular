@@ -1,0 +1,38 @@
+.devis-filter {
+  margin: 0px 30px 0px 30px;
+  /* border: 1px solid; */
+  padding: 15px;
+}
+
+.date-filter {
+  display: flex;
+  flex-flow: column wrap;
+  /* border: 1px solid; */
+  padding: 5px;
+}
+
+.dates {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.dates > div {
+  flex: 1;
+  margin: 5px;
+}
+
+h5 {
+  border-bottom: 1px solid silver;
+  padding-bottom: 5px;
+}
+
+.target {
+  margin-top: 10px;
+}
+
+.search-btn {
+  float: right;
+  margin-bottom: 15px;
+  border: 1px solid #ced4da;
+}

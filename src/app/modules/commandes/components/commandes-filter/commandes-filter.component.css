@@ -1,0 +1,24 @@
+.filter {
+  padding: 15px;
+}
+
+h5 {
+  border-bottom: 1px solid silver;
+  padding-bottom: 5px;
+}
+
+.date-filter {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.date-filter > div {
+  flex: 1;
+  margin: 5px;
+}
+
+.btn {
+  float: right;
+  border: 1px solid silver;
+}

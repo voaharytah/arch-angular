@@ -1,0 +1,15 @@
+<div class="container">
+  <app-title title="Votre compte (Société)">
+    <app-item
+      *ngFor="let item of addresses"
+      [label]="item.label"
+      [value]="item.value"
+    ></app-item>
+  </app-title>
+  <div class="contact">
+    <app-contact-row
+      title="Contact"
+      [contact]="(homeState$ | async).contact"
+    ></app-contact-row>
+  </div>
+</div>
