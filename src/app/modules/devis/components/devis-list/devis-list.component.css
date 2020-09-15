@@ -1,3 +1,21 @@
 .devis-list {
   padding: 15px 100px 0px 100px;
 }
+
+.col-container {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.coll {
+  width: 230px;
+  padding: 16px;
+  margin: 10px;
+  background-color: white;
+  box-shadow: 3px 3px 10px rgb(223, 203, 203);
+  display: flex;
+  flex-flow: column wrap;
+}

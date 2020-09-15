@@ -23,7 +23,7 @@ export class DevisItemComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {}
 
-  devisDetail(id: string): void {
+  devisDetail(id: number): void {
     this.router.navigate([`/app/devis/${id}`]);
   }
 

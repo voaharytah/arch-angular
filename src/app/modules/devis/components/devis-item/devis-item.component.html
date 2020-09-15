@@ -1,21 +1,19 @@
-<div
-  *ngIf="devis"
-  class="devis-item"
-  [class.selected]="currentId == devis.stat_id"
-  [id]="devis.stat_id"
->
-  <div class="left">
-    <div>{{ devis.date_vente }}</div>
-    <div>{{ devis.dossier_no }}</div>
-    <div>{{ devis.ref_client }}</div>
+<div class="infos">
+  <div>Date vente : {{ devis.date_vente }}</div>
+  <div>Dossier N° : {{ devis.dossier_no }}</div>
+  <div>Ref client : {{ devis.ref_client }}</div>
+</div>
+
+<div class="footer">
+  <div>{{ devis.montant_ttc }}</div>
+
+  <div>
+    <button *ngIf="devis.doc_pdf" (click)="pdf.emit(devis.doc_pdf)" class="btn">
+      Pdf
+    </button>
   </div>
-  <div class="right">
-    <div>{{ devis.montant_ttc }}</div>
-    <div *ngIf="devis.doc_pdf">
-      <button (click)="pdf.emit(devis.doc_pdf)" class="btn">Pdf</button>
-    </div>
-    <div>
-      <button (click)="devisDetail(devis.stat_id)" class="btn">Détail</button>
-    </div>
+
+  <div class="details">
+    <button (click)="devisDetail(devis.stat_id)" class="btn">Détail</button>
   </div>
 </div>

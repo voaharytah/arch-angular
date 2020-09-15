@@ -9,13 +9,11 @@
       (filterDevis)="handleDevisFilter($event)"
     ></app-devis-filter>
   </app-filter>
-  <div *ngIf="!(loading$ | async)">
-    <app-devis-item
-      *ngFor="let devis of devis$ | async"
-      (pdf)="getPdf($event)"
-      [devis]="devis"
-      [currentId]="currentId"
-    ></app-devis-item>
+
+  <div class="col-container">
+    <div *ngFor="let devis of devis$ | async" class="coll">
+      <app-devis-item [devis]="devis" [currentId]="currentId"></app-devis-item>
+    </div>
   </div>
   <div *ngIf="loading$ | async">Loading...</div>
 </div>
