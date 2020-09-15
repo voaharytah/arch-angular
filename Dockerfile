@@ -5,8 +5,8 @@ COPY . .
 RUN npm install
 RUN npm run build --prod
 
-# Copy builded app into apache/htdocs
+# Copy  app into apache/htdocs
 FROM httpd:2.4
-COPY --from=node ./dist/routes /usr/local/apache2/htdocs/
-# COPY ./dist/routes /usr/local/apache2/htdocs/
+COPY --from=node /app/dist/routes /usr/local/apache2/htdocs/
+
 

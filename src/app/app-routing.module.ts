@@ -49,7 +49,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, RouterModule.forRoot(appRoutes)],
+  imports: [CommonModule, RouterModule.forRoot(appRoutes, { useHash: true })],
   exports: [RouterModule],
   providers: [RouteGuardGuard],
 })
