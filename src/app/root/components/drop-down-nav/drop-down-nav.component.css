@@ -4,4 +4,25 @@
 
 .label {
   margin-right: 5px;
+  color: #fff;
+}
+
+.dropdown-toggle {
+  color: #fff;
+}
+
+.dropdown-menu {
+  background: #000;
+}
+
+.dropdown-menu > a {
+  color: white;
+}
+
+a:hover {
+  background: #007bff;
+}
+
+.active {
+  color: #f60;
 }

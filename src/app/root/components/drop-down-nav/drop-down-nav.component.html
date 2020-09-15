@@ -1,6 +1,11 @@
 <li [class]="{ show: toggle }" class="nav-item dropdown">
   <span class="nav-link">
-    <span (click)="toggle = false" class="label" routerLink="{{ menu.path }}">
+    <span
+      routerLinkActive="active"
+      (click)="toggle = false"
+      class="label"
+      routerLink="{{ menu.path }}"
+    >
       {{ menu.label }}
     </span>
     <span
